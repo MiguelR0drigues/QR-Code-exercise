@@ -11,7 +11,10 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="https://fonts.google.com/specimen/Outfit" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Outfit"
+    />
 
     <title>Frontend Mentor | QR code component</title>
 
@@ -23,7 +26,7 @@
         background-color: hsl(212, 45%, 89%);
         font-family: "Outfit";
         display: flex;
-        height: 100vh;
+        min-height: 100vh;
         align-items: center;
         justify-content: center;
       }
@@ -31,25 +34,26 @@
       p {
         color: hsl(220, 15%, 55%);
         font-weight: 400;
-        font-size: 15px;
+        font-size: 0.8rem;
       }
 
       h1 {
         color: hsl(218, 44%, 22%);
         font-weight: 700;
-        font-size: 26px;
+        font-size: 1.5rem;
       }
 
       img {
         width: 90%;
         border-radius: 25px;
         padding: 0;
+        margin-top: -5rem;
       }
 
-      .container {
+      main {
         background-color: hsl(0, 0%, 100%);
-        width: 18vw;
-        height: 570px;
+        max-width: 320px;
+        min-height: 570px;
         border-radius: 25px;
         display: flex;
         flex-direction: column;
@@ -62,15 +66,25 @@
         padding: 15px;
       }
 
-      @media (max-width: 405px) {
-        .container {
-          width: 90%;
+      @media (max-width: 320px) {
+        main {
+          max-width: 250px;
+          min-height: 480px;
+        }
+        h1 {
+          font-size: 1.2rem;
+        }
+        img {
+          margin-top: -3.8rem;
+        }
+        p {
+          font-size: 0.7rem;
         }
       }
     </style>
   </head>
   <body>
-    <section class="container">
+    <main>
       <img src="./images/image-qr-code.png" alt="QR Code" />
       <div class="content">
         <h1>Improve your front-end skills by building projects</h1>
@@ -79,6 +93,6 @@
           to the next level
         </p>
       </div>
-    </section>
+    </main>
   </body>
 </html>
